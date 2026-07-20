@@ -35,7 +35,12 @@ jobs:
                 "android_client_info": {
                   "package_name": "com.incendiariosbr.girocerto.rkqnz"
                 }
-              }
+              },
+              "api_key": [
+                {
+                  "current_key": "AIzaSyDummyKeyForBuildPurposeOnly00000"
+                }
+              ]
             }
           ]
         }
