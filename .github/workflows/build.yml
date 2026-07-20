@@ -18,6 +18,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: Generate Debug Keystore & Mock Google Services
+      run: |
+        keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+        if [ ! -f app/google-services.json ]; then
+          echo '{"project_info":{"project_number":"000000000000","project_id":"dummy-project"},"client":[{"client_info":{"mobilesdk_app_id":"1:000000000000:android:0000000000000000"}}]}' > app/google-services.json
+        fi
+
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
 
