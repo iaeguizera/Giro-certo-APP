@@ -1,0 +1,6 @@
+{
+  "name": "Giro Certo!",
+  "description": "Otimizador inteligente de rotas de entrega com TSP, geolocalização e integração Waze.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
